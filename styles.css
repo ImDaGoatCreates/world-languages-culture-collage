@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "FrenchFont";
+    src: url("fonts/Satoshi-Variable.ttf");
+}
+
+body {
+    margin: 0;
+
+    /* Cameroon flag background image */
+    background-image: url("images/flag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: "FrenchFont", serif;
+    color: black;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+}
+
+header h1 {
+    font-size: 72px;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    margin-top: 5px;
+    text-shadow: 1px 1px 4px black;
+    font-style: italic;
+}
+
+/* SECTIONS (your translucent boxes) */
+section {
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 14px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* HEADINGS */
+h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+/* IMAGES */
+section img {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* OPTIONAL BUTTONS (if you keep them) */
+.button-bar {
+    text-align: center;
+    margin: 20px;
+}
+
+.button-bar button {
+    background: #007a3d; /* Cameroon green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button-bar button:hover {
+    background: #ce1126; /* Cameroon red */
+}
+
+.button-bar button:disabled {
+    background: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* TEXT STYLES */
+.quote {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.resource-list li {
+    margin: 8px;
+}
