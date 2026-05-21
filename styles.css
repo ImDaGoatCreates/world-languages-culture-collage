@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #363636, #363636);
+}
+
+/* HEADER */
+.hero {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    background: linear-gradient(135deg, #363636, #363636);
+}
+
+/* BUTTONS */
+.button-bar {
+    text-align: center;
+    margin: 20px;
+}
+
+/* BASE BUTTON STYLE */
+.button-bar button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* COLORS (force them properly) */
+.button-bar button:nth-child(1) {
+    background-color: #ff4d4d;
+}
+
+.button-bar button:nth-child(2) {
+    background-color: #4d79ff;
+}
+
+.button-bar button:nth-child(3) {
+    background-color: #33cc66;
+}
+
+/* HOVER */
+.button-bar button:hover {
+    transform: scale(1.05);
+}
+
+/* DISABLED (DO NOT override color) */
+.button-bar button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* SECTIONS */
+.section {
+    display: none;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 14px;
+}
+
+.active {
+    display: block;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* IMAGES (IMPORTANT FOR RUBRIC) */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* COLORS */
+.spanish { border-left: 8px solid #ff4d4d; }
+.french { border-left: 8px solid #4d79ff; }
+.mandarin { border-left: 8px solid #33cc66; }

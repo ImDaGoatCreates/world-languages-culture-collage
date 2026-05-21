@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Languages Culture Collage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <h1>World Languages Culture Collage</h1>
+    <h2>By Hudson, Gavin, and Veronica</h2>
+</header>
+
+
+
+<div class="button-bar">
+    <button id="btn-spanish"onclick="showSection('spanish', this)" disabled>🇪🇸 Spanish</button>
+    <button id="btn-french" onclick="showSection('french', this)">🇫🇷 French</button>
+    <button id="btn-mandarin" onclick="showSection('mandarin', this)">🇨🇳 Mandarin</button>
+</div>
+
+<main>
+
+<!-- SPANISH -->
+<section id="spanish" class="section spanish active">
+    <h2>Spanish Culture</h2>
+
+    <h3>🍽 Foods</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/paella.jpg">
+            <p><b>Paella</b></p>
+        </div>
+        <div class="card">
+            <img src="images/tortilla.jpg">
+            <p><b>Tortilla Española</b></p>
+        </div>
+        <div class="card">
+            <img src="images/empanadas.jpg">
+            <p><b>Empanadas</b></p>
+        </div>
+    </div>
+
+    <h3>🎉 Holidays</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/dayofthedead.jpg">
+            <p><b>Día de los Muertos</b><br>Day of the Dead</p>
+        </div>
+        <div class="card">
+            <img src="images/tomatina.jpg">
+            <p><b>La Tomatina</b><br>Tomato Fight</p>
+        </div>
+    </div>
+
+    <h3>🏛 Symbols</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/sagrada.jpg">
+            <p>Sagrada Familia</p>
+        </div>
+        <div class="card">
+            <img src="images/flamenco.jpg">
+            <p>Flamenco</p>
+        </div>
+    </div>
+
+    <h3>💬 Phrases</h3>
+    <div class="grid">
+        <div class="card"><p>Hola — Hello</p></div>
+        <div class="card"><p>Gracias — Thank you</p></div>
+    </div>
+</section>
+
+<!-- FRENCH -->
+<section id="french" class="section french">
+    <h2>French Culture</h2>
+
+    <h3>🍽 Foods</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/croissant.jpg">
+            <p>Croissant</p>
+        </div>
+        <div class="card">
+            <img src="images/ratatouille.jpg">
+            <p>Ratatouille</p>
+        </div>
+        <div class="card">
+            <img src="images/crepes.jpg">
+            <p>Crêpes</p>
+        </div>
+    </div>
+
+    <h3>🎉 Holidays</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/bastille.jpg">
+            <p>Bastille Day</p>
+        </div>
+        <div class="card">
+            <img src="images/cannes.jpg">
+            <p>Cannes Festival</p>
+        </div>
+    </div>
+
+    <h3>🏛 Symbols</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/eiffel.jpg">
+            <p>Eiffel Tower</p>
+        </div>
+        <div class="card">
+            <img src="images/beret.jpg">
+            <p><b>Beret</b><br>French Hat</p>
+            
+        </div>
+    </div>
+
+    <h3>💬 Phrases</h3>
+    <div class="grid">
+        <div class="card"><p>Bonjour — Hello</p></div>
+        <div class="card"><p>Merci — Thank you</p></div>
+    </div>
+</section>
+
+<!-- MANDARIN -->
+<section id="mandarin" class="section mandarin">
+    <h2>Mandarin Culture</h2>
+
+    <h3>🍽 Foods</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/dumplings.jpg">
+            <p>饺子 (Jiǎozi)</p>
+        </div>
+        <div class="card">
+            <img src="images/pekingduck.jpg">
+            <p>北京烤鸭</p>
+        </div>
+        <div class="card">
+            <img src="images/friedrice.jpg">
+            <p>炒饭</p>
+        </div>
+    </div>
+
+    <h3>🎉 Holidays</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/newyear.jpg">
+            <p>春节</p>
+        </div>
+        <div class="card">
+            <img src="images/moonfestival.jpg">
+            <p>中秋节</p>
+        </div>
+    </div>
+
+    <h3>🏛 Symbols</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="images/greatwall.jpg">
+            <p>Great Wall</p>
+        </div>
+        <div class="card">
+            <img src="images/dragon.jpg">
+            <p>Dragon</p>
+        </div>
+    </div>
+
+    <h3>💬 Phrases</h3>
+    <div class="grid">
+        <div class="card"><p>你好 — Hello</p></div>
+        <div class="card"><p>谢谢 — Thank you</p></div>
+    </div>
+</section>
+
+</main>
+
+
+<script>
+function showSection(sectionId, button) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.classList.remove('active'));
+
+    // Show selected section
+    document.getElementById(sectionId).classList.add('active');
+
+    // Get all buttons
+    const buttons = document.querySelectorAll('.button-bar button');
+
+    // Enable ALL buttons first
+    buttons.forEach(btn => {
+        btn.disabled = false;
+        btn.classList.remove('active-btn');
+    });
+
+    // Disable the clicked button
+    button.disabled = true;
+    button.classList.add('active-btn');
+}
+</script>
+
+</body>
+</html>
